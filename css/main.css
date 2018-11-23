@@ -3229,12 +3229,12 @@ html.no-csstransitions .home-content__main {
   }
 
   .item-folio .item-folio__thumb a::before {
-  opacity: 1;
+  opacity: 0.85;
   visibility: visible;
 }
 
 .item-folio .item-folio__thumb a::after {
-  opacity: 1;
+  opacity: 0.85;
   visibility: visible;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -3249,7 +3249,7 @@ html.no-csstransitions .home-content__main {
 
 .item-folio .item-folio__project-link,
 .item-folio .item-folio__text {
-  opacity: 1;
+  opacity: 0.85;
   visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -3277,12 +3277,12 @@ html.no-csstransitions .home-content__main {
     font-size: 1.4rem;
   }
 .item-folio .item-folio__thumb a::before {
-  opacity: 1;
+  opacity: 0.85;
   visibility: visible;
 }
 
 .item-folio .item-folio__thumb a::after {
-  opacity: 1;
+  opacity: 0.85;
   visibility: visible;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -3297,7 +3297,7 @@ html.no-csstransitions .home-content__main {
 
 .item-folio .item-folio__project-link,
 .item-folio .item-folio__text {
-  opacity: 1;
+  opacity: 0.85;
   visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -3312,12 +3312,12 @@ html.no-csstransitions .home-content__main {
   }
 
   .item-folio .item-folio__thumb a::before {
-  opacity: 1;
+  opacity: 0.85;
   visibility: visible;
 }
 
 .item-folio .item-folio__thumb a::after {
-  opacity: 1;
+  opacity: 0.85;
   visibility: visible;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -3332,7 +3332,7 @@ html.no-csstransitions .home-content__main {
 
 .item-folio .item-folio__project-link,
 .item-folio .item-folio__text {
-  opacity: 1;
+  opacity: 0.85;
   visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
