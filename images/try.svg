@@ -1,0 +1,24 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 187.75 72.25">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        font-size: 52px;
+        font-family: STIXGeneral-Regular, STIXGeneral;
+      }
+    </style>
+  </defs>
+  <title>try</title>
+  <g id="Artwork_2" data-name="Artwork 2">
+    <path class="cls-1" d="M31.26.61,1.26,17V50.06l30,16,30-16V17.15ZM28.53,58.43,10.35,48.74,21.81,41.1c3-2-.18-6.44-3.39-4.3L6.71,44.61V23.06L28.53,35V58.43ZM9.8,18.53,28.53,8.31V20.39c0,3.6,5.45,3.61,5.45,0v-12l18.85,10.4L31.27,30.24ZM34,35,55.8,23.33V44.61L44.18,36.86c-3.23-2.15-6.34,2.33-3.4,4.29l11.38,7.58L34,58.43Z"/>
+  </g>
+  <rect id="_Slice_" data-name="&lt;Slice&gt;" class="cls-2" width="187.75" height="66"/>
+  <text class="cls-3" transform="translate(75.86 49.22)">AIS</text>
+</svg>
