@@ -8,7 +8,7 @@
     "use strict";
     
     var cfg = {
-        scrollDuration : 800, // smoothscroll duration
+        scrollDuration : 600, // smoothscroll duration
         mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
     },
 
@@ -21,7 +21,7 @@
 
     // svg fallback
     if (!Modernizr.svg) {
-        $(".header-logo img").attr("src", "images/logo.png");
+        $(".header-logo img").attr("src", "images/newlogo.png");
     }
 
 
@@ -39,7 +39,7 @@
             // will first fade out the loading animation 
             $("#loader").fadeOut("slow", function() {
                 // will fade out the whole DIV that covers the website.
-                $("#preloader").delay(300).fadeOut("slow");
+                $("#preloader").delay(200).fadeOut("slow");
             }); 
             
             // for hero content animations 
@@ -110,7 +110,7 @@
         containerBricks.imagesLoaded(function () {
             containerBricks.masonry({
                 itemSelector: '.masonry__brick',
-                resize: false
+                resize: true
             });
         });
     };
@@ -119,7 +119,7 @@
    /* photoswipe
     * ----------------------------------------------------- */
     var ssPhotoswipe = function() {
-        var items = [],
+        var items = [[],[]],
             $pswp = $('.pswp')[0],
             $folioItems = $('.item-folio');
 
@@ -127,16 +127,16 @@
         $folioItems.each( function(i) {
 
             var $folio = $(this),
-                $thumbLink =  $folio.find('.thumb-link'),
-                $title = $folio.find('.item-folio__title'),
-                $caption = $folio.find('.item-folio__caption'),
-                $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
-                $captionText = $.trim($caption.html()),
-                $href = $thumbLink.attr('href'),
-                $size = $thumbLink.data('size').split('x'),
-                $width  = $size[0],
-                $height = $size[1];
-        
+            $thumbLink =  $folio.find('.thumb-link'),
+            $title = $folio.find('.item-folio__title'),
+            $caption = $folio.find('.item-folio__caption'),
+            $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
+            $captionText = $.trim($caption.html()),
+            $href = $thumbLink.attr('href'),
+            $size = $thumbLink.data('size').split('x'),
+            $width  = $size[0],
+            $height = $size[1];
+            
             var item = {
                 src  : $href,
                 w    : $width,
@@ -147,7 +147,42 @@
                 item.title = $.trim($titleText + $captionText);
             }
 
-            items.push(item);
+            items[i].push(item);
+            
+            if(i == 0){
+                var hrefs = ['images/portfolio/gallery/g-beetle.jpg','images/portfolio/gallery/g-salad.jpg'];
+                for(var j = 0 ; j < 2 ;j++ ){
+                    $href = hrefs[j];
+                    var item = {
+                        src  : $href,
+                        w    : $width,
+                        h    : $height
+                    }
+
+                    if ($caption.length > 0) {
+                        item.title = $.trim($titleText + $captionText);
+                    }
+
+                    items[i].push(item);
+                }
+            }
+            else if(i == 1){
+                var hrefs = ['images/portfolio/gallery/g-lamp.jpg','images/portfolio/gallery/g-fuji.jpg'];
+                for(var j = 0 ; j < 2 ;j++ ){
+                    $href = hrefs[j];
+                    var item = {
+                        src  : $href,
+                        w    : $width,
+                        h    : $height
+                    }
+
+                    if ($caption.length > 0) {
+                        item.title = $.trim($titleText + $captionText);
+                    }
+
+                    items[i].push(item);
+                }
+            }
         });
 
         // bind click event
@@ -156,12 +191,12 @@
             $(this).on('click', function(e) {
                 e.preventDefault();
                 var options = {
-                    index: i,
+                    index: 0,
                     showHideOpacity: true
                 }
 
                 // initialize PhotoSwipe
-                var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+                var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items[i], options);
                 lightBox.init();
             });
 
@@ -180,7 +215,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             pauseOnFocus: false,
-            autoplaySpeed: 1500
+            autoplaySpeed: 1000
         });
     };
 
@@ -217,7 +252,7 @@
     var ssAlertBoxes = function() {
 
         $('.alert-box').on('click', '.alert-box__close', function() {
-            $(this).parent().fadeOut(500);
+            $(this).parent().fadeOut(300);
         }); 
 
     };
@@ -228,10 +263,10 @@
     var ssAOS = function() {
         
         AOS.init( {
-            offset: 200,
-            duration: 600,
+            offset: 100,
+            duration: 400,
             easing: 'ease-in-sine',
-            delay: 300,
+            delay: 200,
             once: true,
             disable: 'mobile'
         });
